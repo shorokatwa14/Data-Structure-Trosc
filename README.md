@@ -53,9 +53,12 @@
 ## Tree
 **Basic Terminologies In Tree**
 <br>
+<br>
 **Properties of a Tree**
 <br>
+<br>
 **Types of Tree data structures**
+<br>
 <br>
 **Basic Operation in Binary Search Tree**
 - insertion

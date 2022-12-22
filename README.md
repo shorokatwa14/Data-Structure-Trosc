@@ -3,11 +3,11 @@
 
  1. Time Complexity
  2. Linked List
- 3.stack
+ 3. stack
  4. Queue
  5. Tree
 
-# [You can see the material from here ] ()
+# [You can see the material from here ] (https://docs.google.com/document/d/1EWznMVHHF_scHAn8hwAcV1wB5-_koxPF6MJiwBoNsMI/edit)
 ## **Linked List**
 **Singly Linked List:**
  - Insert at head

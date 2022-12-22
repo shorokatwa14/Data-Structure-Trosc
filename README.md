@@ -517,8 +517,124 @@ _____
 <br>
 <br>
 **Basic Operation in Binary Search Tree**
+- Classes
+~~~ c++
+lass BST{
+public:
+    int data;
+    BST* right,*left;
+public:
+    BST(){
+        data = 0;
+        right = left = NULL;
+    }
+    BST(int val){
+        data = val;
+        right = left = NULL;
+    }
+ };
+~~~
+___
 - insertion
+~~~ c++
+BST* insert (BST* root ,int num){
+       if (root == NULL) return new BST(num);
+       else if (num > root -> data ){
+           root -> right = insert(root -> right , num);
+       }
+       else if (num <= root -> data ){
+            root -> left  = insert(root -> left , num);
+        }
+       return root ;
+    }
+~~~
+___
+- Find Minimum Number in Tree
+~~~ c++
+ BST* findMin(BST* root){
+        while (root -> left != NULL){
+            root = root -> left;
+        }
+        return root;
+    }
+~~~
+___
+- Find Maximum Number in Tree
+~~~ c++
+BST* findMax(BST* root){
+        while (root -> right != NULL){
+            root = root -> right;
+        }
+        return root;
+    }
+~~~
+___
 - deletion
+~~~ c++
+ BST* remove (BST* root,int val){
+        if(!root) return NULL;
+       else if (val > root -> data){
+            root -> right = remove(root -> right , val);
+        }
+        else if (val > root -> data){
+            root -> left = remove(root -> left , val);
+        }
+        else{
+            if(root -> right == NULL){
+                BST* temp = root -> left ;
+                free(root);
+                return temp ;
+            }
+           else if(root -> left == NULL){
+                BST* temp = root -> right ;
+                free(root);
+                return temp ;
+            }
+           else {
+                BST *temp = findMin(root->right);
+                root->data = temp->data;
+                free(temp);
+            }
+        }
+    }
+
+~~~
+___
 - print Tree Traversals  (Inorder, Preorder and Postorder)
+~~~ c++
+void preorder(BST* root){   //  root left right
+        if (!root) return;
+        cout << root -> data << " ";
+        preorder(root -> left);
+        preorder(root -> right);
+    }
+    void inorder(BST* root){   //  left root  right
+        if (!root) return;   // 3
+        preorder(root -> left);
+        cout << root -> data << " ";
+        preorder(root -> right);
+    }
+    void postorder (BST* root){   //  left right root
+        if (!root) return;
+        preorder(root -> left);
+        preorder(root -> right);
+        cout << root -> data << " ";
+    }
+
+~~~
+___
 - Searching
+~~~ c++
+ BST* search(BST* root , int num){
+        if(!root) return NULL;
+        else if (num == root -> data) return root;
+        else if (num > root -> data) {
+            search(root -> right ,num);
+        }
+        else if (num > root -> data) {
+            search(root -> left ,num);
+        }
+    }
+~~~
+___
 

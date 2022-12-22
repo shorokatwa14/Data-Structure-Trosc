@@ -165,6 +165,24 @@ ____
 
 
 **Doubly Linked List :**
+ - Classes
+ ~~~ c++
+ class Node {
+public:
+    int data;
+    Node* next ;
+    Node* prev;
+};
+class Doubly {
+public:
+    Node *head;
+    Node* tail;
+
+    Doubly() {
+        head = tail = NULL;
+    }
+ ~~~
+ ____
  - Insert at head
  - Insert at tail
  - Delete from head

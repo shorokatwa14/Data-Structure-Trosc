@@ -11,6 +11,20 @@
 # [My Session ](https://docs.google.com/document/d/1EWznMVHHF_scHAn8hwAcV1wB5-_koxPF6MJiwBoNsMI/edit)
 ## **Linked List**
 **Singly Linked List:**
+*###Classes
+~~~ c++
+class Node {
+public:
+    int data;
+    Node* next ;
+};
+class linkedList {
+public:
+    Node *head =NULL;
+
+};
+~~~
+____
  - Insert at head
  ~~~ c++
 void addNodeAtHead(int num) {

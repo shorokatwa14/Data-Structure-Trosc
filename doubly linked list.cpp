@@ -76,89 +76,15 @@ public:
 
 };
 
-
-class node{
-public:
-        int data;
-        node *next ;
-};
-class circular{
-public:
-    node* head = NULL;
-    void add_head(int val){
-        node* new_node = new node;
-        new_node -> data = val;
-        if (head == NULL){
-            head = new_node;
-            new_node -> next = head;
-        }
-        else {
-            new_node -> next = head;
-            node* curr = head;
-            while (curr -> next != head){
-                curr = curr -> next;
-            }
-            curr->next = new_node;
-            head = new_node;
-        }
-    }
-    void add_tail(int val){
-        node* new_node = new node;
-        new_node -> data = val;
-        if (head == NULL){
-            head = new_node;
-            new_node -> next = head;
-        }
-        else{
-            node* curr = head;
-            while (curr -> next != head){
-                curr = curr -> next;
-            }
-            curr -> next = new_node;
-            new_node -> next = head;
-        }
-    }
-    void print (){
-        node* curr =head;
-        while (curr -> next != head){
-            cout << curr -> data << " ";
-            curr = curr -> next;
-        }
-        cout << curr -> data << endl;
-    }
-
-void delete_head(){
-       node* curr = head;
-       node* prev = head;
-       while (curr -> next != head){
-           curr = curr -> next;
-       }
-       curr -> next = head -> next;
-       head = head -> next;
-       delete prev;
-    }
-  void delete_tail(){
-        node* curr = head;
-        node* prev;
-      while (curr -> next != head){
-          prev = curr;
-          curr = curr -> next;
-      }
-      prev -> next = head;
-      delete curr;
-    }
-
-
-};
 int main() {
     freopen("output.txt","w",stdout);
-    circular c;
-    c.add_head(5);
-    c.add_head(3);
-    c.add_tail(2);
-    c.add_tail(4);
-    c.print();
-    c.delete_tail();
-    c.print();
+    Doubly d;
+    d.add_head(5);
+    d.add_head(3);
+    d.add_tail(2);
+    d.add_tail(4);
+    d.print();
+    d.delete_tail();
+    d.print();
     return 0;
 }

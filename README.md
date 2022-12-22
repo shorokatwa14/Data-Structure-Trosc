@@ -409,7 +409,7 @@ ____
  - Enqueue
  - dequeue
  - isEmpty
- - isNUll
+ - isNull
  - peek
 ~~~ c++
 #define size 10
@@ -459,7 +459,7 @@ ______
  - Enqueue
  - dequeue
  - isEmpty
- - isNUll
+ - isNull
  - peek
 ~~~ c++
 #define size 10

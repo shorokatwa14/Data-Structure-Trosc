@@ -7,7 +7,7 @@
  4. Queue
  5. Tree
 
-#[You can see the material from here ] (https://docs.google.com/document/d/1EWznMVHHF_scHAn8hwAcV1wB5-_koxPF6MJiwBoNsMI/edit)
+# [You can see the material from here ](https://docs.google.com/document/d/1EWznMVHHF_scHAn8hwAcV1wB5-_koxPF6MJiwBoNsMI/edit)
 ## **Linked List**
 **Singly Linked List:**
  - Insert at head
@@ -51,6 +51,7 @@
  - peek
 ## Tree
 **Basic Terminologies In Tree**
+<br>
 **Properties of a Tree**
 **Types of Tree data structures**
 **Basic Operation in Binary Search Tree**

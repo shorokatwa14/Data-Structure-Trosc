@@ -55,7 +55,7 @@ public:
         preorder(root -> right);
     }
     void inorder(BST* root){   //  left root  right
-        if (!root) return;   // 3
+        if (!root) return;  
         preorder(root -> left);
         cout << root -> data << " ";
         preorder(root -> right);

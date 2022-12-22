@@ -514,13 +514,13 @@ _____
 **Properties of a Tree**
 <br>
 <br>
-**Types of Tree data structures**
+**Types of Tree Data Structures**
 <br>
 <br>
 **Basic Operation in Binary Search Tree**
 - Classes
 ~~~ c++
-lass BST{
+class BST{
 public:
     int data;
     BST* right,*left;

@@ -34,15 +34,28 @@
  - Delete from tail 
  - print
  
-## stack:
+## Stack:
 **Basic Operations of Stack:**
 - push
 - pop
 - isEmpty
 - isNull
+- peek
 
 ## Queue
-**Simple Queue:**
- -
+**Simple and Circular Queue:**
+ - Enqueue
+ - dequeue
+ - isEmpty
+ - isNUll
+ - peek
+##Tree
+**Basic Terminologies In Tree **
+**Properties of a Tree**
+**Types of Tree data structures**
+**Basic Operation in Binary Search Tree**
+- insertion
+- deletion
+- print Tree Traversals  (Inorder, Preorder and Postorder)
+- Searching
 
-**Reading materials:**

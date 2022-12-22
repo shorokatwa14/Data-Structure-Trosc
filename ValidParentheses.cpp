@@ -2,7 +2,7 @@
 #include <stack>
 using namespace std;
 int main() {
-    string s="(())())";
+        string s="(())())";
         stack <char> st;
         bool valid = true;
         for (int i = 0 ;i<s.size();i++){

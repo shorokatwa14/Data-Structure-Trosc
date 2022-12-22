@@ -3,7 +3,7 @@
 
  1. Time Complexity
  2. Linked List
- 3. stack
+ 3. Stack
  4. Queue
  5. Recursion Basics
  6. Tree

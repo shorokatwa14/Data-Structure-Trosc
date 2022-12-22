@@ -508,7 +508,7 @@ public:
 _____
 
 ## Tree
-** - Basic Terminologies In Tree**
+* ## Basic Terminologies In Tree
 <br>
 <br>
 **Properties of a Tree**

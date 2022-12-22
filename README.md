@@ -223,11 +223,7 @@ _____
 _____
  - Delete from head
 ~~~ c++
-~~~
-_____
- - Delete from tail 
-~~~ c++
- void delete_head(){
+void delete_head(){
         Node* curr = head;
         head = head -> next;
         head -> prev = NULL;
@@ -235,9 +231,9 @@ _____
     }
 ~~~
 _____
- - print
+ - Delete from tail 
 ~~~ c++
-void delete_tail(){
+ void delete_tail(){
         Node* curr = head -> next;
         Node* pre = head;
         while (curr -> next != NULL){
@@ -246,6 +242,18 @@ void delete_tail(){
         }
         pre -> next = NULL;
         delete curr;
+    }
+~~~
+_____
+ - print
+~~~ c++
+void print(){
+        Node* curr = head;
+        while (curr -> next != head){
+            cout << curr -> data << " ";
+            curr = curr -> next;
+        }
+        cout << curr -> data <<endl;
     }
 ~~~
 _____

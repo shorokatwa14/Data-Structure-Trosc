@@ -8,9 +8,9 @@
  5. Recursion Basics
  6. Tree
 
-# [My Session ](https://docs.google.com/document/d/1EWznMVHHF_scHAn8hwAcV1wB5-_koxPF6MJiwBoNsMI/edit)
-* ## [Slides]()
-* ## [Tree and Sorting Summry]()
+# [My Session ](https://drive.google.com/drive/folders/1z-0eftxJbCeScwTTvkBz98OQ3CMl1hWf?usp=sharing)
+* ## [Slides](https://docs.google.com/presentation/d/1wAIgHNlyPMe3t72YeVHmIGqYjqlAu_WQ/edit#slide=id.p1)
+* ## [Tree and Sorting Summry](https://docs.google.com/document/d/1EWznMVHHF_scHAn8hwAcV1wB5-_koxPF6MJiwBoNsMI/edit)
 ## **Linked List**
 **Singly Linked List:**
 - Classes

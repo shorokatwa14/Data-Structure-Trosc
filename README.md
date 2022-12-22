@@ -363,6 +363,45 @@ _____
 - isEmpty
 - isNull
 - peek
+~~~c++
+#define MAX 10
+class Stack {
+public:
+    int top= -1;
+    int stack[MAX];
+    bool is_full(){
+        return top == MAX-1;
+    }
+    bool is_empty(){
+      return top == -1;
+    }
+    void push(int val){
+        if(is_full()) return;
+        top++;
+        stack[top]= val;
+    }
+    void pop (){
+        if(is_empty()) return;
+        --top;
+    }
+    void peek (){
+        if (is_empty()) return;
+        int x = stack[top];
+        cout << "Top element is : " << x << endl;
+    }
+    int size(){
+        return top;
+    }
+    void print (){
+        for(int i = 0;i <=top;i++){
+            cout << stack[i] << " ";
+        }
+        cout << endl;
+    }
+
+};
+~~~
+____
 
 ## Queue
 **Simple and Circular Queue:**
@@ -371,6 +410,50 @@ _____
  - isEmpty
  - isNUll
  - peek
+~~~ c++
+#define size 10
+class Queue {
+public:
+    int queue[size];
+    int front = -1 , rear = -1;
+    bool is_full(){
+        return rear == size-1;
+    }
+    bool is_empty(){
+        return front == rear;
+    }
+    void enqueue(int val) {
+        if (is_full()) return;
+        else {
+            if (rear == -1 && front == -1){
+                ++rear;
+                ++front;
+                queue[rear] = val;
+            }
+            else {
+                ++rear;
+                queue[rear] = val;
+            }
+        }
+    }
+    void dequeue(){
+        if(is_empty()) return;
+        ++front;
+    }
+    void peek(){
+        if(is_empty()) return;
+        int x = queue[front];
+        cout <<"The front element is " << x;
+    }
+    void print (){
+        for(int i = front;i <=rear;i++){
+            cout << queue[i] << " ";
+        }
+        cout << endl;
+    }
+};
+~~~
+______
 ## Tree
 **Basic Terminologies In Tree**
 <br>

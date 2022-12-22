@@ -181,20 +181,172 @@ public:
     Doubly() {
         head = tail = NULL;
     }
+ };
  ~~~
  ____
  - Insert at head
+~~~ c++
+void add_head(int val){
+        Node* new_node = new Node;
+        new_node -> data= val;
+        if (head == NULL){
+            head = tail = new_node;
+            new_node -> next = NULL;
+            new_node -> prev = NULL;
+        }
+        else{
+            new_node -> next = head;
+            new_node -> prev = NULL;
+            head -> prev = new_node;
+            head = new_node;
+        }
+    }
+~~~
+_____
  - Insert at tail
+ ~~~ c++
+ void add_tail(int val){
+        Node* new_node = new Node;
+        new_node->data = val;
+        if (head == NULL) {
+            head = tail = new_node;
+            new_node -> next = NULL;
+            new_node -> prev = NULL;
+        } else{
+            new_node -> prev = tail;
+            new_node -> next = NULL;
+            tail -> next = new_node;
+            tail = new_node;
+        }
+    }
+~~~
+_____
  - Delete from head
+~~~ c++
+~~~
+_____
  - Delete from tail 
+~~~ c++
+ void delete_head(){
+        Node* curr = head;
+        head = head -> next;
+        head -> prev = NULL;
+        delete curr;
+    }
+~~~
+_____
  - print
+~~~ c++
+void delete_tail(){
+        Node* curr = head -> next;
+        Node* pre = head;
+        while (curr -> next != NULL){
+            pre = curr;
+            curr = curr -> next;
+        }
+        pre -> next = NULL;
+        delete curr;
+    }
+~~~
+_____
 
 **Circular Linked List :**
+ - classes
+ ~~~ c++
+ class Node {
+public:
+    int data;
+    Node* next ;
+
+};
+class Circular {
+public:
+    Node *head = NULL;
+    };
+~~~
+_____
  - Insert at head
+~~~ c++
+ void add_head(int val){
+        Node* new_node = new Node;
+        new_node -> data= val;
+        if (head == NULL){
+            head = new_node;
+            new_node ->next = head;
+        }
+        else{
+            new_node -> next = head;
+            Node* curr = head;
+            while (curr -> next != head){
+                curr = curr -> next;
+            }
+            curr -> next = new_node;
+            head = new_node;
+        }
+    }
+~~~
+_____
  - Insert at tail
+~~~ c++
+ void add_tail(int val){
+        Node* new_node = new Node;
+        new_node -> data= val;
+        if (head == NULL){
+            head = new_node;
+            new_node ->next = head;
+        }
+        else{
+            Node* curr = head;
+            while (curr -> next != head){
+                curr = curr -> next;
+            }
+            curr -> next = new_node;
+            new_node->next = head;
+        }
+    }
+~~~
+_____
  - Delete from head
+~~~ c++
+ void delete_head(){
+        Node* curr = head;
+        while (curr -> next != head){
+            curr = curr -> next;
+        }
+        curr -> next = head -> next;
+        curr = head;
+        head = head -> next;
+        delete curr;
+    }
+
+~~~
+_____
  - Delete from tail 
+~~~ c++
+    void delete_tail(){
+        Node* curr = head;
+        Node* prev = head;
+        while (curr -> next != head){
+            prev = curr;
+            curr = curr -> next;
+        }
+        prev ->next = head;
+        delete curr;
+    }
+~~~
+_____
  - print
+~~~ c++
+void print(){
+        Node* curr = head;
+        while (curr -> next != head){
+            cout << curr -> data << " ";
+            curr = curr -> next;
+        }
+        cout << curr -> data <<endl;
+    }
+~~~
+_____
  
 ## Stack:
 **Basic Operations of Stack:**

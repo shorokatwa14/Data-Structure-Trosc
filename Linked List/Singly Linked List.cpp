@@ -154,7 +154,6 @@ public:
 
 
 int main() {
-    freopen("output.txt","w",stdout);
 
     linkedList list ;
     list.addNodeAtHead(5);

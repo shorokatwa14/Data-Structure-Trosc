@@ -151,7 +151,7 @@ void delete_head(){
 
 };
 int main() {
-    freopen("output.txt","w",stdout);
+  
     Doubly c;
     c.add_head(5);
     c.add_head(3);

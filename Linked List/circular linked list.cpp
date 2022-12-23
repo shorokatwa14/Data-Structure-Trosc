@@ -78,7 +78,7 @@ public:
 
 };
 int main() {
-    freopen("output.txt","w",stdout);
+    
     Circular c;
     c.add_head(5);
     c.add_head(10);
